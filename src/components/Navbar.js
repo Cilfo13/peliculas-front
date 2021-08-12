@@ -5,10 +5,10 @@ export default function Navbar(){
     return (<div>
     <Nb bg="primary" variant="dark">
         <Container>
-            <Link to="/home"><Nb.Brand href="#home">Inicio</Nb.Brand></Link>
+            <Link to="/home">Inicio</Link>
             <Nav className="me-auto">
-            <Link to="/home"><Nav.Link href="#home">Lista de peliculas</Nav.Link></Link>
-            <Link to="/pelicula"><Nav.Link href="#features">Buscar peliculas</Nav.Link></Link>
+            <Link to="/home">Lista de peliculas</Link>
+            <Link to="/pelicula">Buscar peliculas</Link>
             </Nav>
         </Container>
     </Nb>
