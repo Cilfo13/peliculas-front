@@ -2,6 +2,7 @@ import { Modal } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 import { Form } from 'react-bootstrap';
 import { useState } from 'react';
+import {postMovie} from "./postMovie";
 
 export default function ModalCreateMovie({movies, setMovies, setNewMovie, newMovie}){
     const [showEdit, setShowEdit] = useState(false);
@@ -19,7 +20,10 @@ export default function ModalCreateMovie({movies, setMovies, setNewMovie, newMov
             id: maxId +1,
             title: newMovie,
         }
-        setMovies([...movies, movieToAddToState])
+        postMovie(movieToAddToState)
+        .then(newNote =>{
+            setMovies([...movies, movieToAddToState])
+        })
         setNewMovie("");
         handleCloseEdit();
     }

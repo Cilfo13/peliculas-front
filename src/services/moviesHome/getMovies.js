@@ -1,14 +1,11 @@
-export const getMovies = [
-    {
-        id:1,
-        title:'Alicia en el pais de las maravillas',
-    },
-    {
-        id:2,
-        title:'Black Widow',
-    },
-    {
-        id:3,
-        title:'Luca',
-    }
-  ]
+import axios from "axios"
+
+export const getMovies = ()=>{
+    return axios.get("https://blooming-shore-60109.herokuapp.com/api/notes")
+    .then(response=>{
+        console.log(response)
+        const {data} = response
+        console.log(data)
+        return data
+    })
+}
