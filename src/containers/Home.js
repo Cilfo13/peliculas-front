@@ -1,9 +1,10 @@
 import ListOfMovies from "../components/ListOfMovies";
 import { useState } from "react";
 import ModalCreateMovie from "../services/moviesHome/ModalCreateMovie";
+import { getMovies } from "../services/moviesHome/getMovies";
 
-export default function Home(props){
-    const [movies, setMovies] = useState(props.movies)
+export default function Home(){
+    const [movies, setMovies] = useState(getMovies)
     const [newMovie, setNewMovie] = useState("");
 
     return(

@@ -13,11 +13,11 @@ export default function ModalCreateMovie({movies, setMovies, setNewMovie, newMov
     }
     const handleSubmit = (event) =>{
         event.preventDefault()
+        const ids = movies.map(note => note.id)
+        const maxId = Math.max(...ids)
         const movieToAddToState ={
-            id: movies.length+1,
-            content: newMovie,
-            date: new Date().toISOString(),
-            important: Math.random()<0.5,
+            id: maxId +1,
+            title: newMovie,
         }
         setMovies([...movies, movieToAddToState])
         setNewMovie("");

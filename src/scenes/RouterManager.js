@@ -8,7 +8,7 @@ import Home from "../containers/Home";
 import BusquedaPeliculaContainer from "../containers/BusquedaPeliculaContainer";
 import Navbar from "../components/Navbar";
 
-export default function App({movies}) {
+export default function App() {
   return (
     <Router>
       <div>
@@ -16,13 +16,13 @@ export default function App({movies}) {
         
         <Switch>
           <Route path="/home">
-            <Home movies={movies} />
+            <Home/>
           </Route>
           <Route path="/pelicula">
             <BusquedaPeliculaContainer/>
           </Route>
           <Route path="/">
-            <Home movies={movies} />
+            <Home/>
           </Route>
         </Switch>
       </div>

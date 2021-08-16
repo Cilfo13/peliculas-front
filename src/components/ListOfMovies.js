@@ -11,8 +11,7 @@ export default function ListOfMovies({movies, setMovies, newMovie, setNewMovie})
                 .map((movie)=> <Movie 
                                 key={movie.id} 
                                 movieId={movie.id} 
-                                content={movie.content} 
-                                date={movie.date} 
+                                title={movie.title} 
                                 movies={movies} 
                                 setMovies={setMovies} 
                                 newMovie={newMovie}

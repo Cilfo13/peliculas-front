@@ -9,7 +9,7 @@ export default function EditModal({movies, setMovies, movieId, newMovie, setNewM
         let index = newMovieToEdit.findIndex(function(el){
             return el.id === id;
         });
-        newMovieToEdit[index].content = newMovie
+        newMovieToEdit[index].title = newMovie
         setMovies([...newMovieToEdit])
         setNewMovie("");
         handleCloseEdit();
