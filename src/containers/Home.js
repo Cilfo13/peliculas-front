@@ -13,7 +13,7 @@ export default function Home(){
         .then(mov=>{
             setMovies(mov)
         })
-    }, [])
+    })
 
     return(
         <div>
